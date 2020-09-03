@@ -1,19 +1,24 @@
-# Getting Started
+  # Spring MVC and Thymeleaf
+     
+     -------------
+     Build the executable
+     -------------
+        mvn -DskipTests=true package 
 
-### Reference Documentation
-For further reference, please consider the following sections:
+     Access the app using
+        Windows: http://192.168.99.100:8080/spring-mvc-example-war-1.0.0/#
+        Ubuntu : http://localhost:8080/spring-mvc-example-war-1.0.0/#
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Thymeleaf](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-spring-mvc-template-engines)
+     -------------
+     Build docker image
+     -------------
+         docker build -t springmvc-thymeleaf-war .
 
-### Guides
-The following guides illustrate how to use some features concretely:
+     -------------
+     Run app as Docker container
+     -------------
+         docker run -p 8888:8080 --name springmvc-thymeleaf-c springmvc-thymeleaf-war
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-
+     Access the app using
+         Windows: http://192.168.99.100:8888/spring-mvc-example-war-1.0.0/#a 
+         Ubuntu : http://localhost:8888/spring-mvc-example-war-1.0.0/#
